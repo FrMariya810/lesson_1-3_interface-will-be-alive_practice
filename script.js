@@ -9,8 +9,16 @@ const labStatus = document.querySelector("#lab-status");
 // 01. Уберите /* и */ вокруг обработчика, сохраните файл и нажмите
 // первую карточку. Потом переходите к заданию 02 в TASKS.md.
 
+const eventName = "Город в деталях";
+let clickCount = 0;
+
 firstCard.addEventListener("click", () => {
-  labStatus.textContent = "Открыта первая карточка";
+  clickCount = clickCount + 1;
+  if (clickCount === 1) {
+  labStatus.textContent = `Первое открытие: ${eventName}`;
+} else {
+  labStatus.textContent = `Повторное открытие: ${eventName}`;
+}
 });
 
 
