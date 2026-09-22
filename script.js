@@ -24,7 +24,18 @@ cards.forEach((card) => {
   });
 });
 
+let selectedCard = null;
+
 function showEvent(card) {
+  if (selectedCard) {
+    selectedCard.classList.remove("event-card--selected");
+  }
+
+  card.classList.add("event-card--selected");
+  selectedCard = card;
+
+  detailsPanel.style.setProperty("--accent", card.dataset.accent);
+
   detailsTitle.textContent = card.dataset.title;
   detailsDescription.textContent = card.dataset.description;
   detailsTime.textContent = card.dataset.time;
