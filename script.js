@@ -12,6 +12,8 @@ const labStatus = document.querySelector("#lab-status");
 const eventName = "Город в деталях";
 let clickCount = 0;
 
+const detailsTitle = document.querySelector("#details-title");
+
 firstCard.addEventListener("click", () => {
   clickCount = clickCount + 1;
   if (clickCount === 1) {
@@ -19,6 +21,9 @@ firstCard.addEventListener("click", () => {
 } else {
   labStatus.textContent = `Повторное открытие: ${eventName}`;
 }
+
+detailsTitle.textContent = eventName;
+
 });
 
 
