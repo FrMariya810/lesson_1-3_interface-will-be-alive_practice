@@ -23,7 +23,12 @@ firstCard.addEventListener("click", () => {
 }
 
 detailsTitle.textContent = eventName;
+});
 
+const secondCard = document.querySelector('[data-event="workshop"]');
+
+secondCard.addEventListener("click", () => {
+  detailsTitle.textContent = "Мастерская постеров";
 });
 
 
