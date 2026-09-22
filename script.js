@@ -31,6 +31,9 @@ secondCard.addEventListener("click", () => {
   detailsTitle.textContent = "Мастерская постеров";
 });
 
+const cards = document.querySelectorAll(".event-card");
+const eventCount = document.querySelector("#event-count");
+eventCount.textContent = cards.length;
 
 // 02–03. Вы будете постепенно менять обработчик выше: добавите
 // переменные, счетчик нажатий и условие. Не создавайте второй
